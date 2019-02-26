@@ -1,0 +1,64 @@
+@page
+@model SearchCrimeAreaModel
+@{
+  ViewData["Title"] = "Search Area";
+}
+
+<div style="padding: 40px; height: -webkit-fill-available;">
+    <h2 style="margin-bottom: 30px">Search Crime Area</h2> 
+    @{
+         if (@Model.EX != null)
+         {
+             <hr />
+             <h3 style="color:red">**ERROR: @Model.ErrorMsg</h3>
+             <br />
+             <hr />
+         }
+         else if (@Model.NoResultMsg != " ")
+         {
+             <hr />
+             <br />
+             <h3 style="color:red">@Model.NoResultMsg</h3>
+             <br />
+         }
+         else
+         {
+            <table class="table">  
+                <thead style="color: #1b7ef7; font-size: 17px;">  
+                    <tr>  
+                        <th>Rank</th>
+                        <th>Area Number</th>
+                        <th>Area Name</th>
+                        <th>IUCR</th>  
+                        <th>PrimaryDesc</th>  
+                        <th>SecondaryDesc</th>  
+                        <th>NumTimes</th>  
+                        <th>Crime Percentage</th>
+                        <th>Arrest Perecentage</th>
+                    </tr>  
+                </thead>  
+                <tbody>
+                    @{
+                       int rank = 1;
+                     }
+                    @foreach (var item in Model.CrimeAreaList)  
+                    {  
+                        <tr>  
+                            <td>@rank</td> 
+                            <td>@item.AreaNum</td> 
+                            <td>@item.AreaName</td> 
+                            <td>@item.IUCR</td>  
+                            <td>@item.PrimaryDesc</td>  
+                            <td>@item.SecondaryDesc</td>  
+                            <td>@item.NumTimes</td>
+                            <td>@item.CrimePercentage</td>
+                            <td>@item.ArrestPercentage</td>
+                        </tr> 		
+                        rank++;
+                    } 
+                </tbody> 
+            </table> 
+         }
+         <a class="btn btn-default" href="/GetSearchCrimeArea">Back To Search</a> 
+    }
+</div>

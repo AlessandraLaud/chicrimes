@@ -1,0 +1,52 @@
+@page
+@model SearchCrimeYearModel
+@{
+  ViewData["Title"] = "Search Year";
+}
+
+<div style="padding: 40px; height: -webkit-fill-available;"">
+    <h2 style="margin-bottom: 30px">Search Crime Year</h2> 
+    @{
+         if (@Model.EX != null)
+         {
+             <hr />
+             <h3 style="color:red">**ERROR: @Model.ErrorMsg</h3>
+             <br />
+             <hr />
+         }
+         else if (@Model.NoResultMsg != " ")
+         {
+             <hr />
+             <br />
+             <h3 style="color:red">@Model.NoResultMsg</h3>
+             <br />
+         }
+         else
+         {
+            <table class="table">  
+                <thead style="color: #1b7ef7; font-size: 17px;">  
+                    <tr>  
+                        <th>Area Number</th>
+                        <th>Area Name</th>
+                        <th>PrimaryDesc</th>  
+                        <th>IUCR</th>
+                        <th>Year</th>
+                    </tr>  
+                </thead>  
+                <tbody>
+                   @foreach (var item in Model.CrimeYearList)  
+                    {  
+                        <tr>  
+                            <td>@item.AreaNum</td> 
+                            <td>@item.AreaName</td>
+                            <td>@item.PrimaryDesc</td>
+                            <td>@item.IUCR</td>
+                            <td>@item.Year</td>  
+                        </tr> 		
+                    } 
+                </tbody> 
+            </table> 
+         }
+         <a class="btn btn-default" href="/GetSearchCrimeYear">Back To Search</a> 
+    }
+</div>

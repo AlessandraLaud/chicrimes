@@ -1,0 +1,65 @@
+@page
+@model MonthlyCrimesModel
+@{
+    ViewData["Title"] = "Monthly Crimes";
+}
+
+<div style="padding: 40px 80px 40px 80px;">
+    <h2 align="center" style="margin-bottom: 40px">Monthly Crimes</h2>
+    @{
+        <div class="row" style="display:flex; flex-direction: row; justify-content: space-evenly; padding-top: 50px;">
+            <div class="square">
+                <p class="month">Jan</p>
+                <p class="monthCrimeNumber">@Model.Months[0] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">Feb</p>
+                <p class="monthCrimeNumber">@Model.Months[1] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">March</p>
+                <p class="monthCrimeNumber">@Model.Months[2] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">April</p>
+                <p class="monthCrimeNumber">@Model.Months[3] Crimes</p>
+            </div>
+        </div>
+        <div class="row" style="display:flex; flex-direction: row; justify-content: space-evenly; padding-top: 50px;">
+            <div class="square">
+                <p class="month">May</p>
+                <p class="monthCrimeNumber">@Model.Months[4] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">June</p>
+                <p class="monthCrimeNumber">@Model.Months[5] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">July</p>
+                <p class="monthCrimeNumber">@Model.Months[6] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">August</p>
+                <p class="monthCrimeNumber">@Model.Months[7] Crimes</p>
+            </div>
+        </div>
+        <div class="row" style="display:flex; flex-direction: row; justify-content: space-evenly; padding-top: 50px;">
+            <div class="square">
+                <p class="month">September</p>
+                <p class="monthCrimeNumber">@Model.Months[8] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">October</p>
+                <p class="monthCrimeNumber">@Model.Months[9] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">November</p>
+                <p class="monthCrimeNumber">@Model.Months[10] Crimes</p>
+            </div>
+            <div class="square">
+                <p class="month">December</p>
+                <p class="monthCrimeNumber">@Model.Months[11] Crimes</p>
+            </div>
+        </div>
+       }
+</div>

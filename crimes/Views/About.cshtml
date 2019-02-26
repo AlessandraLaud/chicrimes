@@ -1,0 +1,26 @@
+@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<div class="container-fluid" style="padding: 40px;">  
+        <div id="searchCardContainer" class="row" align="center">  
+            <div class="col-md-4" style="width: 800px; height: 400px;">
+                 <div id="searchCard" class="card">
+                      <div>
+                        <h2>@ViewData["Title"]</h2> 
+                        <hr style="border-top: 1px solid #d8d8d8;" />
+                        <p id="about-heading"><span style="color:#1b7ef7">Chi</span>Crimes - A Chicago crime information hub</p>
+                        <p id="about-info">
+                            ChiCrimes is here to provide information about Chicago crimes.
+                            Please feel free to navigate to the search option and look for 
+                            crimes by year or area. You may also view the curent Top 10 crimes,
+                            as well as a list of crimes or areas.
+                        </p>
+                        <a id="about-button" class="btn btn-primary" href="/">Start Using ChiCrimes!</a>
+                      </div>
+                 </div>
+            </div>  
+        </div>   			
+</div>

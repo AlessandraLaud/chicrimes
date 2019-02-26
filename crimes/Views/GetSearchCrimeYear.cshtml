@@ -1,0 +1,25 @@
+@page
+@model GetSearchCrimeYearModel
+@{
+  ViewData["Title"] = "Get Crime Year";
+}
+
+<div class="container-fluid" style="padding: 40px; height: -webkit-fill-available;">  
+	<form action="SearchCrimeYear" method="get">
+        <div id="searchCardContainer" class="row">  
+            <div class="col-md-4" style="width: 800px; height: 400px;">
+                 <div id="searchCard" class="card">
+                      <div>
+                        <h2 align="center">Search Crime Year</h2>  
+                        <hr style="border-top: 1px solid #d8d8d8;" />
+                        <label asp-for="Input" style="font-size: 20px; padding-top: 10px; padding-bottom: 10px;">Enter a year to view crimes:</label>  
+                        <input asp-for="Input" class="form-control" />
+                        <br />  
+                        <input type="submit" value="Search" class="btn btn-primary" style="background-color: #1b7ef7; border-color: #ccc; width: 20%"/>  
+                        <a class="btn btn-default" style="width: 20%; margin-left: 10px;" href="/">Cancel</a> 
+                      </div>
+                 </div>
+            </div>  
+        </div>   			
+    </form>
+</div>

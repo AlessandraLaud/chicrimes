@@ -1,0 +1,30 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <div id="homepage-header" class="row">
+    <link rel="stylesheet" href="~/css/index.css" />
+        <img src="~/images/chi.JPG" alt="Chicago" width="100%" height="100%">
+        <div style="position: absolute; transform: translate(0, -140%);">
+            <p id="homepage-title"><span style="color:#1b7ef7">Chi</span>Crimes</p>
+        </div>
+    </div>
+
+    <div id="homepage-stats" class="row">
+        @{
+            <div class="hompage-circle-row">
+                <div><div class="homepage-circle">@Model.numHomicide</div><p class="circle-font" align="center">Homicide</p></div>
+                <div><div class="homepage-circle">@Model.numSexOffense</div><p class="circle-font" align="center">Sex Offense</p></div>
+                <div><div class="homepage-circle">@Model.numRobbery</div><p class="circle-font" align="center">Robbery</p></div>
+            </div>
+            <div class="hompage-circle-row">
+                <div><div class="homepage-circle">@Model.numAssault</div><p class="circle-font" align="center">Assault</p></div>
+                <div><div class="homepage-circle">@Model.numStalking</div><p class="circle-font" align="center">Stalking</p></div>
+                <div><div class="homepage-circle">@Model.numBurglary</div><p class="circle-font" align="center">Burglary</p></div>
+            </div> 
+          }
+    </div>
+</div>

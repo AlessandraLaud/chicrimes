@@ -1,0 +1,48 @@
+@page
+@model AreaListModel
+@{
+  ViewData["Title"] = "List Of Areas";
+}
+
+<div style="padding: 40px 80px 40px 80px;">
+    <h2 style="margin-bottom: 40px">Area List</h2> 
+    
+    @{
+         if (@Model.EX != null)
+         {
+           <br />
+             <br />
+             <h3 style="color:red">**ERROR: @Model.EX.Message</h3>
+             <br />
+             <hr />
+             <br />
+             <br />
+         }
+         else
+         {
+            <table class="table">  
+                <thead style="color: #1b7ef7; font-size: 17px;">  
+                    <tr>  
+                        <th>Area Name</th>  
+                        <th>Area Number</th>  
+                        <th>Number Of Crimes</th>  
+                        <th>Crime Percentage</th>  
+                    </tr>  
+                </thead>  
+                <tbody>  
+                    @foreach (var item in Model.AreaList)  
+                    {  
+                        if(item.AreaNum != 0) {
+                            <tr>   
+                                <td>@item.AreaName</td>  
+                                <td>@item.AreaNum</td>  
+                                <td>@item.NumCrimes</td>  
+                                <td>@item.CrimePercentage</td>
+                            </tr> 
+                        }
+                    }  
+                </tbody>  
+            </table> 
+         }
+    }
+</div>

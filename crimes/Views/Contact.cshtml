@@ -1,0 +1,33 @@
+@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container-fluid" style="padding: 40px; height: -webkit-fill-available;>  
+    <div id="searchCardContainer" class="row">  
+        <div class="col-md-4" style="width: 800px; height: 400px;">
+             <div id="searchCard" class="card">
+                  <div>
+                    <h2 align="center">@ViewData["Title"]</h2> 
+                    <hr style="border-top: 1px solid #d8d8d8;" />
+                    <ul class="contact-list">
+                      <li>
+                          <i class="glyphicon glyphicon-user icon"></i>
+                          <span class="contact-list-item">Alessandra Laudando</span>
+                      </li>
+                      <li>
+                          <i class="glyphicon glyphicon-phone icon"></i>  
+                          <span class="contact-list-item"><a href="mailto:Support@example.com">630-873-0681</a></span>
+                      </li>
+                      <li>
+                          <i class="glyphicon glyphicon-envelope icon"></i>  
+                          <span class="contact-list-item"><a href="mailto:Support@example.com">alauda2@uic.edu</a></span>
+                      </li>
+                    </ul>
+                  </div>
+             </div>
+        </div>  
+    </div>   			
+</div>
+
