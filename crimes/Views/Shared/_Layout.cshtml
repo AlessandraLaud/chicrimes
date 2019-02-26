@@ -42,8 +42,6 @@
                     </li>
                     <li><a asp-page="/CrimeList">Crime List</a></li>
                     <li><a asp-page="/AreaList">Area List</a></li>
-                    <li><a asp-page="/MonthlyCrimes">Monthly Crimes</a></li>
-                    <li><a asp-page="/Connection">Connection</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li style="float:right"><a asp-page="/Contact">Contact</a></li>
                 </ul>
@@ -55,9 +53,6 @@
 
     <div style="display: grid; height: inherit">
         @RenderBody()
-        <footer id="footer">
-            <p>&copy; 2018 - crimes</p>
-        </footer>
     </div>
 
     <environment include="Development">
