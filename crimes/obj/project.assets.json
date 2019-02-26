@@ -11759,11 +11759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sandra/Documents/Fall 2018/CS 341/project07-crimes-web/crimes/crimes.csproj",
+      "projectUniqueName": "/Users/sandra/Code/Projects/ChiCrimes/crimes/crimes.csproj",
       "projectName": "crimes",
-      "projectPath": "/Users/sandra/Documents/Fall 2018/CS 341/project07-crimes-web/crimes/crimes.csproj",
+      "projectPath": "/Users/sandra/Code/Projects/ChiCrimes/crimes/crimes.csproj",
       "packagesPath": "/Users/sandra/.nuget/packages/",
-      "outputPath": "/Users/sandra/Documents/Fall 2018/CS 341/project07-crimes-web/crimes/obj/",
+      "outputPath": "/Users/sandra/Code/Projects/ChiCrimes/crimes/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
